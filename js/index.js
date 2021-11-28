@@ -1,10 +1,26 @@
 $('#bus-btn').click(function() {
-    $('#bus-container').css('display','block');
+    $('#bus-container').css('display','flex');
     $('.bus-navbar').css('display','block');
-    $('#inital-page').css('display','none');
+
+    $('#initial-page').css('display','none');
     $('#long-distance-container').css('display','none');
     $('#plan-container').css('display','none');
   });
+  $('#long-distance-btn').click(function() {
+    $('#long-distance-container').css('display','block');
+    $('#initial-page').css('display','none');
+    $('#bus-container').css('display','none');
+    $('.bus-navbar').css('display','block');
+    $('#plan-container').css('display','none');
+  });
+  $('#plan-btn').click(function() {
+    $('#plan-container').css('display','block');
+    $('.bus-navbar').css('display','block');
+    $('#initial-page').css('display','none');
+    $('#bus-container').css('display','none');
+    $('#long-distance-container').css('display','none');
+  });
+
   var map = L.map('map');
 
   // 設定經緯度座標
@@ -21,10 +37,10 @@ $('#bus-btn').click(function() {
       });
   map.addLayer(osm);
 
-  const customIcon = L.icon({
-      iconUrl: './img/bike-icon.png',
-      iconSize: [50, 60],
-  });
+//   const customIcon = L.icon({
+//       iconUrl: './img/bike-icon.png',
+//       iconSize: [50, 60],
+//   });
   response.data.forEach(function (data, ID) {
       const marker = L.marker([response.data[ID].StationPosition.PositionLat, response.data[ID].StationPosition.PositionLon], {
           icon: customIcon,

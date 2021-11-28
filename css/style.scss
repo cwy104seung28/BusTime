@@ -19,7 +19,7 @@ body {
         @include size(100%, 100vh);
         background: linear-gradient(180deg, #200337 0%, rgba(51, 61, 113, 0.82) 40%, #443b68 100%);
         #initial-page {
-            display: none;
+            // display: none;
             position: relative;
             transition: ease-in-out 0.5s;
             .page-bg {
@@ -74,7 +74,7 @@ body {
             }
         }
         #bus-container {
-            display: flex;
+            display: none;
 
             // transition: ease-in-out 0.5s;
             .search-bus {

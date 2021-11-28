@@ -17,7 +17,6 @@ body main {
 }
 
 body main #initial-page {
-  display: none;
   position: relative;
   -webkit-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
@@ -82,9 +81,7 @@ body main #initial-page .page-content .button .bus-page:hover {
 }
 
 body main #bus-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 
 body main #bus-container .search-bus {
