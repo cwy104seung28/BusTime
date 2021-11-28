@@ -71,7 +71,7 @@ body main #initial-page .page-content .button .bus-page {
   font-size: 21px;
   line-height: 140%;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 body main #initial-page .page-content .button .bus-page:hover {
@@ -95,18 +95,37 @@ body main #bus-container .search-bus {
   margin: 85px 25px 0;
 }
 
+body main #bus-container .search-bus .search {
+  width: 90%;
+  height: 30px;
+  border: 2px solid #c0a7c4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 14px;
+  background-color: transparent;
+  margin: 20px;
+}
+
+body main #bus-container .search-bus .search-result {
+  width: 90%;
+  height: 550px;
+  margin: 0 20px;
+  background: rgba(102, 86, 130, 0.47);
+  border-radius: 10px;
+}
+
 body main #bus-container .bus-time {
   background: rgba(22, 25, 51, 0.81);
   width: 35%;
-  height: calc(96vh - 50px);
-  margin: 85px 40px 0;
+  height: calc(97vh - 50px);
+  margin: 70px 40px 0;
 }
 
 body main #bus-container .bus-map {
   background: rgba(22, 25, 51, 0.81);
   width: 37.5%;
   height: calc(96vh - 50px);
-  margin: 85px 0px 0;
+  margin: 70px 0px 0;
 }
 
 button {

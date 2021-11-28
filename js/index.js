@@ -34,7 +34,7 @@ $('#bus-btn').click(function() {
   });
 // function mapResponse() {
 //     axios.get(
-//         'https://ptx.transportdata.tw/MOTC/v2/Bus/RealTimeByFrequency/City/Taichung?$top=30&$format=JSON',
+//         'https://ptx.transportdata.tw/MOTC/v2/Bus/Route/City/Taipei?$filter=BusRouteType%20eq%2011&$top=100&$format=JSON',
 
 //         {
 //             headers: getAuthorizationHeader()
@@ -73,3 +73,4 @@ $('#bus-btn').click(function() {
 //         .catch((error) => console.log(error))
 // }
 // mapResponse();
+// response.data[ID].NameType.Zh_tw

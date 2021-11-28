@@ -36,7 +36,7 @@ body {
                 z-index: 1;
                 top: 300px;
                 left: 35%;
-                .logo{
+                .logo {
                     margin-left: calc(50% - 73px);
                     margin-bottom: 25px;
                 }
@@ -49,52 +49,65 @@ body {
                     color: #ffffff;
                     margin-bottom: 45px;
                     display: inline-block;
-
                 }
-                .button{
+                .button {
                     .bus-page {
                         width: 185px;
                         height: 44px;
                         background: #c0a7c4;
                         border-radius: 22px;
                         transition: ease-in-out 0.5s;
-                        
+
                         font-style: normal;
                         font-weight: normal;
                         font-size: 21px;
                         line-height: 140%;
                         text-align: center;
-                        color: #FFFFFF;
-                        
+                        color: #ffffff;
+
                         &:hover {
                             box-shadow: 0px 0px 4px #d032d3, 0px 0px 11px #d032d3;
                             transition: ease-in-out 0.5s;
                         }
                     }
                 }
-
             }
         }
-        #bus-container{
+        #bus-container {
             display: flex;
+
             // transition: ease-in-out 0.5s;
-            .search-bus{
+            .search-bus {
                 background: rgba(22, 25, 51, 0.81);
                 border-radius: 30px;
                 @include size(380px, 665px);
                 margin: 85px 25px 0;
+                .search {
+                    @include size(90%, 30px);
+                    border: 2px solid #c0a7c4;
+                    box-sizing: border-box;
+                    border-radius: 14px;
+                    background-color: transparent;
+                    margin: 20px;
+                }
+                .search-result {
+                    @include size(90%, 550px);
+                    margin: 0 20px;
+                    background: rgba(102, 86, 130, 0.47);
+                    border-radius: 10px;
+                }
             }
-            .bus-time{
+            .bus-time {
                 background: rgba(22, 25, 51, 0.81);
                 // border-radius: 30px;
-                @include size(35%, calc(96vh - 50px));
-                margin: 85px 40px 0;
+                @include size(35%, calc(97vh - 50px));
+                margin: 70px 40px 0;
             }
-            .bus-map{
+            .bus-map {
                 background: rgba(22, 25, 51, 0.81);
                 // border-radius: 30px;
                 @include size(37.5%, calc(96vh - 50px));
-                margin: 85px 0px 0;
+                margin: 70px 0px 0;
             }
         }
     }
@@ -114,10 +127,10 @@ button {
     }
 }
 @keyframes display-none {
-    0%{
+    0% {
         opacity: 1;
     }
-    100%{
+    100% {
         opacity: 0;
     }
 }
