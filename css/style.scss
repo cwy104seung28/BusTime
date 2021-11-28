@@ -1,0 +1,123 @@
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+@mixin BG($i, $s) {
+    background-image: $i;
+    background-size: $s;
+}
+body {
+    font-family: Noto Sans TC;
+    .bus-navbar {
+        background-color: #161933;
+        padding: 8px 24px;
+        position: absolute;
+        width: 100%;
+        // display: none;
+    }
+    main {
+        @include size(100%, 100vh);
+        background: linear-gradient(180deg, #200337 0%, rgba(51, 61, 113, 0.82) 40%, #443b68 100%);
+        #initial-page {
+            display: none;
+            position: relative;
+            transition: ease-in-out 0.5s;
+            .page-bg {
+                @include size(100%, 100vh);
+                @include BG(url("../img/initial-bg.png"), cover);
+                position: absolute;
+                background-position: 0 100%;
+                opacity: 0.5;
+                animation: page-bg 3s 1;
+                z-index: 0;
+            }
+            .page-content {
+                position: absolute;
+                z-index: 1;
+                top: 300px;
+                left: 35%;
+                .logo{
+                    margin-left: calc(50% - 73px);
+                    margin-bottom: 25px;
+                }
+                .text {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 17px;
+                    line-height: 140%;
+                    text-align: center;
+                    color: #ffffff;
+                    margin-bottom: 45px;
+                    display: inline-block;
+
+                }
+                .button{
+                    .bus-page {
+                        width: 185px;
+                        height: 44px;
+                        background: #c0a7c4;
+                        border-radius: 22px;
+                        transition: ease-in-out 0.5s;
+                        
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 21px;
+                        line-height: 140%;
+                        text-align: center;
+                        color: #FFFFFF;
+                        
+                        &:hover {
+                            box-shadow: 0px 0px 4px #d032d3, 0px 0px 11px #d032d3;
+                            transition: ease-in-out 0.5s;
+                        }
+                    }
+                }
+
+            }
+        }
+        #bus-container{
+            display: flex;
+            // transition: ease-in-out 0.5s;
+            .search-bus{
+                background: rgba(22, 25, 51, 0.81);
+                border-radius: 30px;
+                @include size(380px, 665px);
+                margin: 85px 25px 0;
+            }
+            .bus-time{
+                background: rgba(22, 25, 51, 0.81);
+                // border-radius: 30px;
+                @include size(35%, calc(96vh - 50px));
+                margin: 85px 40px 0;
+            }
+            .bus-map{
+                background: rgba(22, 25, 51, 0.81);
+                // border-radius: 30px;
+                @include size(37.5%, calc(96vh - 50px));
+                margin: 85px 0px 0;
+            }
+        }
+    }
+}
+button {
+    outline: none;
+    border: none;
+}
+@keyframes page-bg {
+    0% {
+        opacity: 0;
+        top: -100px;
+    }
+    100% {
+        opacity: 0.5;
+        top: 0px;
+    }
+}
+@keyframes display-none {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
